@@ -1,0 +1,16 @@
+<div class="column gap-1">
+    <div class="row wrap gap-1 space-between">
+        <!-- lazy loading with angular 17--rou -->
+        <!-- @defer(on hover){
+        <app-product *ngFor="let product of products" [product]="product"
+            (productOutput)="onProductOutput($event)"></app-product>
+        }@placeholder {
+        <p>Image is loading with lazy load..hover on it</p>
+        } -->
+        <app-product *ngFor="let product of products" [product]="product"
+            (productOutput)="onProductOutput($event)"></app-product>
+
+    </div>
+    <p-paginator (onPageChange)="onPageChange($event)" [totalRecords]="totatRecords" [rows]="rows"
+        [rowsPerPageOptions]="[5, 10, 20]"></p-paginator>
+</div>
